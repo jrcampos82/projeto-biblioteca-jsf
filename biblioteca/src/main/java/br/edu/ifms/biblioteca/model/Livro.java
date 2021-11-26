@@ -51,6 +51,15 @@ public class Livro {
 		this.codigoLivro = codigoLivro;
 	}
 	
+	@Override
+	public String toString() {
+		String msg = getNome() + "\n " +
+					 getAutor() + "\n " +
+					 getCodigoLivro() + "\n " +
+					 getEditora() + "\n " +
+					 getAno();
+		return msg;
+	}
 	//-------------------------------------------------------------------------------
 	//							CRIAR UM ALG P GERAR O CÓDIGO DO LIVRO
 	//-------------------------------------------------------------------------------
