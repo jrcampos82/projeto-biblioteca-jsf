@@ -1,6 +1,8 @@
 package br.edu.ifms.biblioteca.model;
 
-public class Livro {
+import java.io.Serializable;
+
+public class Livro implements Serializable {
 	
 	private int id; // auto
 	private String nome;

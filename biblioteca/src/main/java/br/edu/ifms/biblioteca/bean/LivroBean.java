@@ -6,35 +6,25 @@ import static javax.faces.context.FacesContext.getCurrentInstance;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
+
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
-import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
 import br.edu.ifms.biblioteca.dao.LivroDAO;
 import br.edu.ifms.biblioteca.model.Livro;
 
-@Named
-@SessionScoped
+@Named("livroBean")
+@RequestScoped
 
 public class LivroBean implements Serializable {
     @Inject
-    private Livro livro = new Livro();
+    private Livro livro;
 
-    
+    @Inject    
     private LivroDAO ldao;
 
     private List<Livro> livros;
-
-    
-
-    @PostConstruct
-    public void init() {
-        livros = ldao.selecionarTodos();
-    }
 
     public Livro getLivro(){
         return this.livro;
@@ -46,6 +36,7 @@ public class LivroBean implements Serializable {
 
 
     public List<Livro> getLivros() {
+        if (livros == null) livros = ldao.selecionarTodos();
         return livros;
     }
 

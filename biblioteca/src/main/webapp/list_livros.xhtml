@@ -13,30 +13,48 @@
       <h:form id="form">
         <p:dataTable
           id="livros"
-          var="livro"
+          var="l"
           value="#{livroBean.livros}"
           rowKey="#{livroBean.livro.id}"
           selectionMode="single"
+          paginator="true"
+          rows="5"
+          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+          rowsPerPageTemplate="5,10,15"
         >
           <f:facet name="header">
             Listagem dos livros cadastrados!
           </f:facet>
 
-          <p:column headerText="Nome do Livro">
-            <h:outputText value="#{livro.nome}" />
+          <p:column headerText="Nome do Livro" sortBy="#{l.nome}">
+            <h:outputText value="#{l.nome}" />
           </p:column>
           <p:column headerText="Autor">
-            <h:outputText value="#{livro.autor}" />
+            <h:outputText value="#{l.autor}" />
           </p:column>
           <p:column headerText="Editora">
-            <h:outputText value="#{livro.editora}" />
+            <h:outputText value="#{l.editora}" />
           </p:column>
           <p:column headerText="Código do livro">
-            <h:outputText value="#{livro.codLivro}" />
+            <h:outputText value="#{l.codigoLivro}" />
           </p:column>
           <p:column headerText="Ano de publicação">
-            <h:outputText value="#{livro.ano}" />
+            <h:outputText value="#{l.ano}" />
           </p:column>
+          <h:column>
+            <f:facet name="header">Editar</f:facet>
+            <h:commandButton
+              action="#{livroBean.editar(l.id)}"
+              value="Editar"
+            ></h:commandButton>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Editar</f:facet>
+            <h:commandButton
+              action="#{livroBean.eliminar(l.id)}"
+              value="Eliminar"
+            ></h:commandButton>
+          </h:column>
         </p:dataTable>
 
         <!-- <p:contextMenu for="livros">

@@ -1,5 +1,6 @@
 package br.edu.ifms.biblioteca.dao;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,14 +9,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Stateless;
+
 
 import br.edu.ifms.biblioteca.bd.ConexaoMySQL;
 import br.edu.ifms.biblioteca.model.Livro;
 
 
 
-public class LivroDAO {
+public class LivroDAO implements Serializable {
 	
 	private Connection conn = null;
 	

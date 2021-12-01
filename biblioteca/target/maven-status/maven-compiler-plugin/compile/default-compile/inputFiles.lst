@@ -1,12 +1,11 @@
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/bean/LivroBean.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/App.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/bd/ConexaoMySQL.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/dao/UserDAO.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Livro.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Acervo.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Usuario.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/bean/AcervoBean.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/dao/LivroDAO.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Emprestimo.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Pessoa.java
-/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/service/MeuBean.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\bd\ConexaoMySQL.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\model\Acervo.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\model\Livro.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\bean\LivroBean.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\model\Emprestimo.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\dao\UserDAO.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\dao\LivroDAO.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\model\Pessoa.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\App.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\bean\AcervoBean.java
+c:\Users\Beto\workspace vscode\web II  2021\projeto-biblioteca-jsf\biblioteca\src\main\java\br\edu\ifms\biblioteca\model\Usuario.java
