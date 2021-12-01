@@ -8,8 +8,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateless;
+
 import br.edu.ifms.biblioteca.bd.ConexaoMySQL;
 import br.edu.ifms.biblioteca.model.Livro;
+
+
 
 public class LivroDAO {
 	

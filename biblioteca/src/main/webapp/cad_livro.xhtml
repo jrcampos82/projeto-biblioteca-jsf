@@ -16,13 +16,7 @@
             Cadastro de Livro
           </h3>
         </legend>
-
-        <p:messages
-          id="messages"
-          showDetails="false"
-          autoUpdate="true"
-          closeable="true"
-        />
+        <p:growl id="growl" sticky="true" showDetail="true" />
 
         <h5>Digite o nome do livro</h5>
         <span class="ui-float-label">
@@ -57,7 +51,11 @@
           <p:outputLabel for="@previous" value="ano de publicação" />
         </span>
         <p />
-        <p:commandButton value="Cadastrar" action="#{livroBean.cadastrar}" />
+        <p:commandButton
+          value="Cadastrar"
+          action="#{livroBean.cadastrar}"
+          update="growl"
+        />
       </fieldset>
 
       <p:dialog

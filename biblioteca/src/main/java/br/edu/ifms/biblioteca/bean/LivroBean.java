@@ -4,9 +4,13 @@ package br.edu.ifms.biblioteca.bean;
 import static javax.faces.context.FacesContext.getCurrentInstance;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -14,15 +18,23 @@ import br.edu.ifms.biblioteca.dao.LivroDAO;
 import br.edu.ifms.biblioteca.model.Livro;
 
 @Named
-@RequestScoped
+@SessionScoped
+
 public class LivroBean implements Serializable {
     @Inject
-    Livro livro;
+    private Livro livro = new Livro();
 
-    @Inject
-    LivroDAO ldao;
+    
+    private LivroDAO ldao;
 
-    String msg = "cadastrado";
+    private List<Livro> livros;
+
+    
+
+    @PostConstruct
+    public void init() {
+        livros = ldao.selecionarTodos();
+    }
 
     public Livro getLivro(){
         return this.livro;
@@ -32,29 +44,36 @@ public class LivroBean implements Serializable {
         this.livro = l;
     }
 
-    public String getMsg(){
-        return this.msg;
+
+    public List<Livro> getLivros() {
+        return livros;
     }
 
-    public String cadastrar(){
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
+
+    public void cadastrar(){
         try {
-            System.out.println(livro.toString());  
-            addMessage("Livro cadastrado!");
+            // System.out.println(livro.toString());  
+            
             // validar o campos
             String validar = validar(livro);
             if(!validar.equals("ok")){
                 System.out.println(validar);
-                return "erro";
-            }
+                showError("Erro na validação", validar);
+                // return "erro";
+            } else {
             // inserir no bd
-            ldao.salvar(livro);
-            return "Cadastrado com sucesso!";
+                ldao.salvar(livro);
+                showInfo("Sucesso!", "Livro cadastrado com sucesso!");
+            }
             
         } catch (Exception e) {
             System.out.println("Um erro ocorreu no cadastro!");
-            addMessage(e.getMessage());
+            
         }        
-        return "OK";
+        // return "OK";
     }
 
     private String validar(Livro livro) {
@@ -64,16 +83,30 @@ public class LivroBean implements Serializable {
             (livro.getAutor().equals("")) ||
             (livro.getCodigoLivro().equals("")) ||
             (livro.getAno() == 0)
-        )
+        ){
+            
             return "Preencha os campos corretamente!";
-        
+        }
         
         
         return "ok";
     }
 
-    private void addMessage(String texto){
-        getCurrentInstance().addMessage(null, new FacesMessage(texto));
+    private void addMessage(FacesMessage.Severity severity, String summary, String detail) {
+        getCurrentInstance().
+                addMessage(null, new FacesMessage(severity, summary, detail));
+    }
+
+    public void showInfo(String titulo, String msg) {
+        addMessage(FacesMessage.SEVERITY_INFO, titulo, msg);
+    }
+
+    public void showWarn(String titulo, String msg) {
+        addMessage(FacesMessage.SEVERITY_WARN, titulo, msg);
+    }
+
+    public void showError(String titulo, String msg) {
+        addMessage(FacesMessage.SEVERITY_ERROR, titulo, msg);
     }
     
 }

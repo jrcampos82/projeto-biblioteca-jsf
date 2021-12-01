@@ -5,6 +5,7 @@
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Livro.java
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Acervo.java
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Usuario.java
+/Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/bean/AcervoBean.java
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/dao/LivroDAO.java
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Emprestimo.java
 /Users/beto/workspace-aulas/biblioteca-jsf/projeto-biblioteca-jsf/biblioteca/src/main/java/br/edu/ifms/biblioteca/model/Pessoa.java

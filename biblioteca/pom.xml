@@ -45,6 +45,9 @@
       <artifactId>bootstrap</artifactId>
       <version>5.1.3</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.primefaces.themes/all-themes -->
+    
+
 
     <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
     <!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
