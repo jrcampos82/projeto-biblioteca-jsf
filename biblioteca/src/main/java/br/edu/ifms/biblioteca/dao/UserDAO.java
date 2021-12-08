@@ -52,6 +52,7 @@ public class UserDAO {
 			// ex: 12 reg
 			while(rs.next()) {
 				Usuario usuario = new Usuario();
+				usuario.setId(rs.getInt("id"));
 				usuario.setNome(rs.getString("nome"));
 				usuario.setEndereco(rs.getString("endereco"));
 				usuario.setTelefone(rs.getString("telefone"));

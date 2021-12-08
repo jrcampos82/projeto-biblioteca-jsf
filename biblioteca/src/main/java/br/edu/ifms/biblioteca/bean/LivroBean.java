@@ -83,6 +83,19 @@ public class LivroBean implements Serializable {
         return "ok";
     }
 
+    public String atualizarLivro(Livro livro){
+        ldao.atualizar(livro);
+        return "list_livros";
+    }
+
+
+
+    public String deletarLivro(Livro livro){
+        ldao.deletar(livro.getId());
+        return "list_livros";
+    }
+
+
     private void addMessage(FacesMessage.Severity severity, String summary, String detail) {
         getCurrentInstance().
                 addMessage(null, new FacesMessage(severity, summary, detail));

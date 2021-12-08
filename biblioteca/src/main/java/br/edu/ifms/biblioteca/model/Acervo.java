@@ -3,7 +3,7 @@ package br.edu.ifms.biblioteca.model;
 public class Acervo {
 	
 	private int id;
-	private Livro livro;	// chave estrangeira cod_livro
+	private Livro livro;	// chave estrangeira cod_livro 
 	private int quantidade; // 4 td vez q for emprestado -1 até = 1
 	
 	

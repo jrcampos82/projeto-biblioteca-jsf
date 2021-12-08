@@ -44,96 +44,18 @@
           <h:column>
             <f:facet name="header">Editar</f:facet>
             <h:commandButton
-              action="#{livroBean.editar(l.id)}"
+              action="#{livroBean.atualizarLivro(l)}"
               value="Editar"
             ></h:commandButton>
           </h:column>
           <h:column>
-            <f:facet name="header">Editar</f:facet>
+            <f:facet name="header">Remover</f:facet>
             <h:commandButton
-              action="#{livroBean.eliminar(l.id)}"
+              action="#{livroBean.deletarLivro(l)}"
               value="Eliminar"
             ></h:commandButton>
           </h:column>
         </p:dataTable>
-
-        <!-- <p:contextMenu for="livros">
-          <p:menuitem
-            value="View"
-            update="productDetail"
-            icon="pi pi-search"
-            oncomplete="PF('productDialog').show()"
-          />
-          <p:menuitem
-            value="Delete"
-            update="livros"
-            icon="pi pi-times"
-            action="#{dtContextMenuView.deleteProduct}"
-          />
-        </p:contextMenu> -->
-
-        <!-- <p:dialog
-          header="Product Info"
-          widgetVar="productDialog"
-          modal="true"
-          showEffect="fade"
-          hideEffect="fade"
-          resizable="false"
-        >
-          <p:outputPanel id="productDetail" style="text-align: center;">
-            <p:column rendered="#{not empty dtContextMenuView.selectedProduct}">
-              <div class="product">
-                <div
-                  class="product-grid-item border-0"
-                  style="margin-bottom: 0;"
-                >
-                  <div class="product-grid-item-top">
-                    <div>
-                      <i class="pi pi-tag product-category-icon" />
-                      <span class="product-category">
-                        #{dtContextMenuView.selectedProduct.category}
-                      </span>
-                    </div>
-                    <span
-                      class="product-badge status-#{dtContextMenuView.selectedProduct.inventoryStatus.name().toLowerCase()}"
-                    >
-                      #{dtContextMenuView.selectedProduct.inventoryStatus.text}
-                    </span>
-                  </div>
-                  <div class="product-grid-item-content">
-                    <p:graphicImage
-                      name="demo/images/product/#{dtContextMenuView.selectedProduct.image}"
-                    />
-                    <div class="product-name">
-                      #{dtContextMenuView.selectedProduct.name}
-                    </div>
-                    <div class="product-description">
-                      #{dtContextMenuView.selectedProduct.description}
-                    </div>
-                    <p:rating
-                      readonly="true"
-                      value="#{dtContextMenuView.selectedProduct.rating}"
-                    />
-                  </div>
-                  <div class="product-grid-item-bottom">
-                    <h:outputText
-                      value="#{dtContextMenuView.selectedProduct.price}"
-                      styleClass="product-price"
-                    >
-                      <f:convertNumber currencySymbol="$" type="currency" />
-                    </h:outputText>
-                    <p:commandButton
-                      type="button"
-                      value="Add To Cart"
-                      icon="pi pi-shopping-cart"
-                      disabled="#{dtContextMenuView.selectedProduct.inventoryStatus == 'OUTOFSTOCK'}"
-                    ></p:commandButton>
-                  </div>
-                </div>
-              </div>
-            </p:column>
-          </p:outputPanel>
-        </p:dialog> -->
       </h:form>
     </div>
   </h:body>

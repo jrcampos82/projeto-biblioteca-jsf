@@ -79,6 +79,9 @@ public class LivroDAO implements Serializable {
 	}	
 	//-------------------------------------------------------------------------
 	public void deletar(int id) { // id do livro que queremos deletar
+
+		// verificar o livro pode ser deletado (se tiver emprestado !! ou no acervo da biblio)
+
 		String sql = "DELETE FROM tb_livro WHERE id = ?";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
